@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ldap2date 
+	</title> 
+		<link href="index.css" rel="stylesheet" type="text/css"
+		/>
+</head>
+	<body>
+		<h1>
+			ldap2date.js 
+		</h1>
+			<p>
+				Do you have a string in RFC 4517 Generalized Time syntax, when you really just want a Date?Or perhaps you need some Generalized Time, but have a Date instead. If so, the methods below may help you.
+			</p>
+		<h2>
+			Usage
+		</h2>
+		<h3>
+			ldap2date.parse(time)
+		</h3> 
+			<p>
+				Returns a new Date() object
+				<ul>
+					<li> 
+						Time- A LDAP Generalized-Time string will be returned if the time string cannot be parsed into a valid Date object.
+					</li> 
+				</ul>
+			</p>
+			<p> 
+				Enter Generalized-Time:
+				<input type="text" name="Enter Generalied-Time" size="10" maxlength="40"
+				/> 
+			</P>
+		<h3>
+			ldap2date.toGeneralizedTime(date)	 
+		</h3>
+			<p>
+				Returns a string in GeneralizedTime syntax 
+				<ul>
+					<li>
+						date- A date object 
+					</li> 
+				</ul> 
+			</p> 
+	</body>
+</html>
+
+
+
+
