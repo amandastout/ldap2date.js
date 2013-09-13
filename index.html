@@ -1,49 +1,77 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
-	<title>ldap2date 
-	</title> 
-		<link href="index.css" rel="stylesheet" type="text/css"
-		/>
+  <title>ldap2date 
+  </title> 
+    <link href="index.css" rel="stylesheet" type="text/css"
+    /
 </head>
-	<body>
-		<h1>
-			ldap2date.js 
-		</h1>
-			<p>
-				Do you have a string in RFC 4517 Generalized Time syntax, when you really just want a Date?Or perhaps you need some Generalized Time, but have a Date instead. If so, the methods below may help you.
-			</p>
-		<h2>
-			Usage
-		</h2>
-		<h3>
-			ldap2date.parse(time)
-		</h3> 
-			<p>
-				Returns a new Date() object
-				<ul>
-					<li> 
-						Time - A LDAP Generalized-Time string will be returned if the time string cannot be parsed into a valid Date object.
-					</li> 
-				</ul>
-			</p>
-			<p> 
-				Enter Generalized-Time:
-				<input type="text" name="Enter Generalied-Time" size="10" maxlength="40"
-				/> 
-			</P>
-		<h3>
-			ldap2date.toGeneralizedTime(date)	 
-		</h3>
-			<p>
-				Returns a string in GeneralizedTime syntax 
-				<ul>
-					<li>
-						date - A date object 
-					</li> 
-				</ul> 
-			</p> 
-	</body>
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1 id="banner">Ldap2date.js</h1>
+      </header>
+    <div id="content">
+    <div id="sidebar">  
+      <p>
+        Do you have a string in 
+      <a href="http://www.ietf.org/rfc/rfc4517.txt"> RFC 4517
+      </a> 
+        Generalized-Time syntax, when you really just want a Date?
+        Or perhaps you need some Generalized Time, but have a Date instea.
+        If so, this may help you.
+      </p>
+     </div> 
+    <h1>
+      Usage
+    </h1>
+    <h2>
+      ldap2date.parse(time)
+    </h2> 
+      <p>
+        Turns Generalized-Time strings into Date objects.
+        The value null will be returned if the string cannot be parsed.
+        <ul>
+          <li> 
+            Time - A LDAP Generalized-Time string will be returned if the time string cannot be parsed into a valid Date object.
+          </li> 
+        </ul>
+      </p>
+      <p>  
+        Enter a Generalized Time string: <input>
+         
+      <div id="result">
+        Date: Thu, 28 Feb 2013 19:27:06 GMT
+      </div>
+      </P>
+      <p>
+        <div class="box"> 
+         var date = ldap2date.parse('20130228192706Z')
+         date.toUTCString() // 'Thu, 28 Feb 2013 19:27:06 GMT'
+      </div>
+    </p>
+    <h2>
+      ldap2date.toGeneralizedTime(date)  
+    </h2>
+      <p>
+        Turns a Date object into Generalized-Time string.
+        <ul>
+          <li>
+            date - A date object 
+          </li> 
+        </ul> 
+      </p>
+      <p>
+        <div class="box">
+        var date = new Date('Thu, 28 Feb 2013 19:27:06 GMT')
+        ldap2date.toGeneralizedTime(date) // '20130228192706Z'
+        </div>
+      </p>
+    </div>
+     <footer>
+     </footer>
+    </div>
+  </body>
 </html>
 
 
