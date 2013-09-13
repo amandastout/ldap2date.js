@@ -44,13 +44,11 @@ footer {
   position: absolute;
   bottom: 0;
 }
-#sidebar {
-  text-align: center;
-}
 .box {
   border: 5px dashed #808080;
+  width: 425px;
   color: #2F4F4F;
-  padding: 60px;
+  padding: 80px;
   border-radius: 10px;
 }
 #result {

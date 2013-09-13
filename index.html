@@ -18,7 +18,7 @@
       <a href="http://www.ietf.org/rfc/rfc4517.txt"> RFC 4517
       </a> 
         Generalized-Time syntax, when you really just want a Date?
-        Or perhaps you need some Generalized Time, but have a Date instea.
+        Or perhaps you need some Generalized Time, but have a Date instead.
         If so, this may help you.
       </p>
      </div> 
@@ -31,15 +31,11 @@
       <p>
         Turns Generalized-Time strings into Date objects.
         The value null will be returned if the string cannot be parsed.
-        <ul>
-          <li> 
-            Time - A LDAP Generalized-Time string will be returned if the time string cannot be parsed into a valid Date object.
-          </li> 
-        </ul>
       </p>
       <p>  
-        Enter a Generalized Time string: <input>
-         
+        Enter a Generalized Time string: 
+        <input id="waffles">
+        </input> 
       <div id="result">
         Date: Thu, 28 Feb 2013 19:27:06 GMT
       </div>
@@ -55,11 +51,6 @@
     </h2>
       <p>
         Turns a Date object into Generalized-Time string.
-        <ul>
-          <li>
-            date - A date object 
-          </li> 
-        </ul> 
       </p>
       <p>
         <div class="box">
